@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+    <div class="col-md-4">
+		<div class="form_main">
+                <h4 class="heading"><strong>Add </strong> Job <span></span></h4>
+                <div class="form">
+                <form action="contact_send_mail.php" method="post" id="contactFrm" name="contactFrm">
+                    <input [(ngModel)]="company" type="text" required="" placeholder="Company" value="" name="name" class="txt">
+                    <input [(ngModel)]="title" type="text" required="" placeholder="title" value="" name="name" class="txt">
+                    <input [(ngModel)]="location" type="text" required="" placeholder="location" value="" name="mob" class="txt">
+                    <input [(ngModel)]="salary" type="text" required="" placeholder="salary" value="" name="email" class="txt">
+                    <input (click)="submit()" type="submit" value="submit" name="submit" class="txt2">
+                </form>
+            </div>
+            </div>
+            </div>
+     	</div>
+</div>

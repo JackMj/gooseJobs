@@ -1,0 +1,39 @@
+<div>
+  <app-jumbo>
+  </app-jumbo>
+  <div class="content-area">
+    <div class="container">
+      <div class="row page-title text-center wow bounce" data-wow-delay="1s">
+        <h5>Recent Jobs</h5>
+        <h2><span>50</span> Jobs Listed for you</h2>
+      </div>
+      <div class="row jobs">
+        <div class="col-md-12">
+          <table *ngFor="let l of getKeys()" class="table">
+            <tr class="odd hide-jobs">
+              <td class="tbl-logo"><img src="assets/img/job-logo5.png" alt=""></td>
+              <td class="tbl-title">
+                <h4> {{jobs[l].title}}<br><span class="job-type">full time</span></h4>
+              </td>
+              <td>
+                <p>{{jobs[l].company}} </p>
+              </td>
+              <td>
+                <p><i class="icon-location"></i>{{jobs[l].location}}</p>
+              </td>
+              <td>
+                <p>{{jobs[l].salary}}</p>
+              </td>
+              <td routerLink="./detail/{{l}}" class="tbl-apply"><a>View Job</a></td>
+              <td class="tbl-apply"><a href="">Apply now</a></td>
+            </tr>
+          </table>
+        </div>
+        <div class="more-jobs">
+          <a> <i class="fa fa-refresh"></i>View more jobs</a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <app-testimonials></app-testimonials>
+  </div>
