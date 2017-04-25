@@ -15,7 +15,7 @@ export class Service{
   {
       return firebase.database().ref("/jobs/").push(job).once("value");
   } 
-  public getKidsDetails(id:string)
+  public getJobDetails(id:string)
   {
       return firebase.database().ref('jobs/'+id).once('value');
   }

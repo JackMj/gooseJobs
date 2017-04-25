@@ -10,7 +10,7 @@ import {Service} from '../../service/service'
 })
 export class JobDetailComponent {
 
-  kids;
+  jobs;
   workers;
   constructor(private _route:ActivatedRoute,private router:Router,private _service :Service) 
   {
@@ -19,9 +19,9 @@ export class JobDetailComponent {
     {
       let id = params['id'];
       console.log(id);
-      this._service.getKidsDetails(id).then(data=>{
-       this.kids = data.val();
-       console.log(this.kids);
+      this._service.getJobDetails(id).then(data=>{
+       this.jobs = data.val();
+       console.log(this.jobs);
       }).catch(err=>{
       console.log(err);
       })
