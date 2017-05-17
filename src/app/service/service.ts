@@ -3,7 +3,6 @@ import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 declare var firebase;
 
-
 @Injectable()
 export class Service{
 
@@ -19,7 +18,4 @@ export class Service{
   {
       return firebase.database().ref('jobs/'+id).once('value');
   }
-  
-
-
 }

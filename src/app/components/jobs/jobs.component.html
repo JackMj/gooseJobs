@@ -7,33 +7,104 @@
         <h5>Recent Jobs</h5>
         <h2><span>50</span> Jobs Listed for you</h2>
       </div>
-      <div class="row jobs">
-        <div class="col-md-12">
-          <table *ngFor="let l of getKeys()" class="table">
-            <tr class="odd hide-jobs">
-              <td class="tbl-logo"><img src="assets/img/job-logo5.png" alt=""></td>
-              <td class="tbl-title">
-                <h4> {{jobs[l].title}}<br><span class="job-type">full time</span></h4>
-              </td>
-              <td>
-                <p>{{jobs[l].company}} </p>
-              </td>
-              <td>
-                <p><i class="icon-location"></i>{{jobs[l].location}}</p>
-              </td>
-              <td>
-                <p>{{jobs[l].salary}}</p>
-              </td>
-              <td routerLink="./detail/{{l}}" class="tbl-apply"><a>View Job</a></td>
-              <td class="tbl-apply"><a href="">Apply now</a></td>
-            </tr>
-          </table>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <section>
+            <style>
+              .demo-list-three {
+                width: 650px;
+              }
+            </style>
+            <ul *ngFor="let l of getKeys()" class="demo-list-three mdl-list">
+              <li class="mdl-list__item mdl-list__item--three-line"  routerLink="./detail/{{l}}">
+                <span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-avatar">person</i>
+									<span>{{jobs[l].title}}</span>
+                <span class="mdl-list__item-text-body">
+										Bryan Cranston played the role of Walter in Breaking Bad. He is also known
+										for playing Hal in Malcom in the Middle.
+									</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+									<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">add</i></a>
+								</span>
+              </li>
+            </ul>
+          </section>
         </div>
-        <div class="more-jobs">
-          <a> <i class="fa fa-refresh"></i>View more jobs</a>
+        <div class="mdl-cell mdl-cell--6-col" >
+          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+            <thead>
+              <tr>
+                <th class="mdl-data-table__cell--non-numeric">Material</th>
+                <th>Quantity</th>
+                <th>Unit price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                <td>25</td>
+                <td>$2.90</td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                <td>50</td>
+                <td>$1.25</td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                <td>10</td>
+                <td>$2.35</td>
+              </tr>
+            </tbody>
+          </table>
+
         </div>
       </div>
     </div>
-    <hr>
-    <app-testimonials></app-testimonials>
+
+    <footer class="mdl-mega-footer">
+      <div class="mdl-mega-footer__middle-section">
+
+        <div class="mdl-mega-footer__drop-down-section">
+          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+          <h1 class="mdl-mega-footer__heading">Features</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+        </div>
+
+        <div class="mdl-mega-footer__drop-down-section">
+          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+          <h1 class="mdl-mega-footer__heading">Details</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">Specs</a></li>
+
+          </ul>
+        </div>
+
+        <div class="mdl-mega-footer__drop-down-section">
+          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+          <h1 class="mdl-mega-footer__heading">Technology</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">How it works</a></li>
+
+          </ul>
+        </div>
+
+        <div class="mdl-mega-footer__drop-down-section">
+          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+          <h1 class="mdl-mega-footer__heading">FAQ</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">Questions</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </footer>
   </div>

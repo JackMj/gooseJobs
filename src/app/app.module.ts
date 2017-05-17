@@ -14,6 +14,10 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { InterviewTipsComponent } from './components/interview-tips/interview-tips.component';
 import { CvTipsComponent } from './components/cv-tips/cv-tips.component';
 import { JobDetailComponent } from './components/job-detail/job-detail.component';
+import { FacebookModule } from 'ngx-facebook';
+import { FbPostsComponent } from './components/fb-posts/fb-posts.component';
+import { AgmCoreModule } from 'angular2-google-maps/core';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,15 +31,21 @@ import { JobDetailComponent } from './components/job-detail/job-detail.component
     TestimonialsComponent,
     InterviewTipsComponent,
     CvTipsComponent,
-    JobDetailComponent
+    JobDetailComponent,
+    FbPostsComponent,
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    FacebookModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCYpMnORNcUuV9oYqDSirXOiYPkXqUzpGQ'
+    })
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

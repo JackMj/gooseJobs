@@ -20,8 +20,8 @@ export class JobsComponent {
 
     let promise = todoService.getJobs();
     promise.then(snapshot => {
-      this.jobs = snapshot.val();
-      var listJobs = snapshot.val();
+    this.jobs = snapshot.val();
+    var listJobs = snapshot.val();
       // console.log(listJobs);
     })
     this.getKeys();

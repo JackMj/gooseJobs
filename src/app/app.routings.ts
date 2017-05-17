@@ -10,11 +10,16 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { InterviewTipsComponent } from './components/interview-tips/interview-tips.component';
 import { CvTipsComponent } from './components/cv-tips/cv-tips.component';
 import { JobDetailComponent } from './components/job-detail/job-detail.component';
+import { FbPostsComponent } from './components/fb-posts/fb-posts.component';
 
 const appRouts:Routes = [
 
     {
         path:'',
+        component:JobsComponent
+    },
+    {
+        path:'jobs',
         component:JobsComponent
     },
     {
@@ -32,6 +37,11 @@ const appRouts:Routes = [
     {
         path:'cvTips',
         component:CvTipsComponent
+    }
+     ,
+    {
+        path:'fbPost',
+        component:FbPostsComponent
     }
     ,
     {
